@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/followfork/webpack-demo/issues"
   },
-  "homepage": "https://github.com/followfork/webpack-demo#readme"
+  "homepage": "https://github.com/followfork/webpack-demo#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "html-loader": "^0.5.5",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "vue-loader": "^15.2.4",
+    "webpack-dev-server": "^3.1.4"
+  }
 }
