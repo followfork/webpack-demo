@@ -1,6 +1,8 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-mudule.exports = {
+module.exports = {
 	entry:{
 		app:'./app/js/main.js'
 	},
@@ -8,7 +10,7 @@ mudule.exports = {
 	    contentBase: path.join(__dirname, "dist"),
 	 	compress: true,
 	  	port: 9000
-	}
+	},
 	module:{
 		loaders:[{
 			test:/\.html$/,
@@ -21,7 +23,20 @@ mudule.exports = {
 			loader:'vue-loader!css-loader!sass-loader'
 		}]
 	},
-	plugins:{},
+	resolve: {
+      extensions: [
+        '.js', '.vue', '.json'
+      ],
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js'
+      }
+    },
+	plugins:[
+		new CleanWebpackPlugin(['dist']),
+      	new HtmlWebpackPlugin({
+        	template:'./app/views/index.html'
+      	})
+    ],
 	output:{
 		filename:'[name].min.js',
 		path: path.resolve(__dirname,'dist')
