@@ -4,6 +4,9 @@ vue
 #Reference
 https://webpack.docschina.org
 
+#eslint
+https://github.com/vuejs/eslint-plugin-vue
+
 npm init
 1创建目录
 2
