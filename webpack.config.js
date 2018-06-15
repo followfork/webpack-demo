@@ -17,7 +17,13 @@ module.exports = {
 			loader:'html-loader'
 		},{
 			test:/\.vue$/,
-			loader:'vue-loader'
+			loader:'vue-loader',
+			options: {
+				loaders: {
+					css: 'vue-style-loader!css-loader!px2rem-loader?remUnit=75&remPrecision=8', 
+					sass: 'vue-style-loader!css-loader!px2rem-loader?remUnit=75&remPrecision=8!sass-loader' 
+				}
+			}
 		},{
 			test:/\.scss$/,
 			loader:'vue-loader!css-loader!sass-loader'
