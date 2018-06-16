@@ -2,7 +2,7 @@
 	<div :class="$style.home">
 		<h1>
 			home
-			<p class="title">
+			<p :class="$style.title">
 				sassad
 			</p>
 		</h1>
